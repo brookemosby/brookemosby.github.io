@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>TitanicAttempt module &#8212; TitanicAttempt 1.3 documentation</title>
+    <title>TitanicAttempt’s API documentation &#8212; TitanicAttempt 1.3 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="TitanicAttempt’s API documentation" href="index.html" />
+    <link rel="next" title="TitanicAttempt module" href="TitanicAttempt.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -42,37 +42,21 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="titanicattempt-module">
-<h1>TitanicAttempt module<a class="headerlink" href="#titanicattempt-module" title="Permalink to this headline">¶</a></h1>
-<p>Practicing ML with titanic dataset; unit test coverage, CI, etc.
-Produces predictions for survival for Titanic passengers with 78.5% acurracy.</p>
-<span class="target" id="module-TitanicAttempt.TitanicAttempt"></span><dl class="function">
-<dt id="TitanicAttempt.TitanicAttempt.Create_Random_Forest">
-<code class="descclassname">TitanicAttempt.TitanicAttempt.</code><code class="descname">Create_Random_Forest</code><span class="sig-paren">(</span><em>train</em><span class="sig-paren">)</span><a class="headerlink" href="#TitanicAttempt.TitanicAttempt.Create_Random_Forest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accepts string filename for train and uses to create and return sklearn.ensemble.Random_Forest_Classifier fitted to training set.
-~78.4% accuracy</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="TitanicAttempt.TitanicAttempt.Feature_Engineering">
-<code class="descclassname">TitanicAttempt.TitanicAttempt.</code><code class="descname">Feature_Engineering</code><span class="sig-paren">(</span><em>DataFrame</em>, <em>train</em><span class="sig-paren">)</span><a class="headerlink" href="#TitanicAttempt.TitanicAttempt.Feature_Engineering" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accepts string for DataFrame file and training set with creates and returns new pd.DataFrame, with important features extracted and in a useable form</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="TitanicAttempt.TitanicAttempt.Produce_Predictions">
-<code class="descclassname">TitanicAttempt.TitanicAttempt.</code><code class="descname">Produce_Predictions</code><span class="sig-paren">(</span><em>FileName</em>, <em>train</em>, <em>test</em><span class="sig-paren">)</span><a class="headerlink" href="#TitanicAttempt.TitanicAttempt.Produce_Predictions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accepts string FileName
-Uses Random Forest to create predictions on who survived.
-returns nothing, creates csv file named from parameter FileName in which predictions are contained for testing set.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="TitanicAttempt.TitanicAttempt.Read_Files">
-<code class="descclassname">TitanicAttempt.TitanicAttempt.</code><code class="descname">Read_Files</code><span class="sig-paren">(</span><em>FileName</em><span class="sig-paren">)</span><a class="headerlink" href="#TitanicAttempt.TitanicAttempt.Read_Files" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accepts file name string, reads in file, then converts and returns pd.DataFrame type</p>
-</dd></dl>
-
+  <div class="section" id="titanicattempt-s-api-documentation">
+<h1>TitanicAttempt&#8217;s API documentation<a class="headerlink" href="#titanicattempt-s-api-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TitanicAttempt.html">TitanicAttempt module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
 </div>
 
 
@@ -80,18 +64,24 @@ returns nothing, creates csv file named from parameter FileName in which predict
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">TitanicAttempt&#8217;s API documentation</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">TitanicAttempt&#8217;s API documentation</a></li>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="TitanicAttempt.html" title="next chapter">TitanicAttempt module</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/TitanicAttempt.rst.txt"
+      <li><a href="_sources/index.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -117,7 +107,7 @@ returns nothing, creates csv file named from parameter FileName in which predict
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/TitanicAttempt.rst.txt"
+      <a href="_sources/index.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
