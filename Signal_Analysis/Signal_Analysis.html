@@ -43,21 +43,14 @@
           <div class="body" role="main">
             
   <div class="section" id="signal-analysis-package">
-<h1>Signal_Analysis package<a class="headerlink" href="#signal-analysis-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<h1>Signal_Analysis package
 </div>
-<div class="section" id="signal-analysis-signal-analysis-module">
-<h2>Signal_Analysis.Signal_Analysis module<a class="headerlink" href="#signal-analysis-signal-analysis-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-Signal_Analysis">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Signal_Analysis" title="Permalink to this headline">¶</a></h2>
-<p>module(name[, doc])</p>
-<p>Create a module object.
-The name must be a string; the optional doc argument can have any type.</p>
+<span id="module-contents"></span><h2>Module contents</a></h2>
 <dl class="function">
 <dt id="Signal_Analysis.get_F_0">
-<code class="descclassname">Signal_Analysis.</code><code class="descname">get_F_0</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>time_step=0.04</em>, <em>min_pitch=75</em>, <em>max_pitch=600</em>, <em>max_num_cands=15</em>, <em>silence_threshold=0.03</em>, <em>voicing_threshold=0.45</em>, <em>octave_cost=0.01</em>, <em>octave_jump_cost=0.35</em>, <em>voiced_unvoiced_cost=0.14</em>, <em>accurate=False</em>, <em>pulse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Signal_Analysis.get_F_0" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Signal_Analysis.</code><code class="descname">get_F_0</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>time_step=0.04</em>, <em>min_pitch=75</em>, <em>max_pitch=600</em>, <em>max_num_cands=15</em>, <em>silence_threshold=0.03</em>, <em>voicing_threshold=0.45</em>, <em>octave_cost=0.01</em>, <em>octave_jump_cost=0.35</em>, <em>voiced_unvoiced_cost=0.14</em>, <em>accurate=False</em>, <em>pulse=False</em><span class="sig-paren">)</span></a></dt>
 <dd><p>Compute Fundamental Frequency (F0).
 Algorithm filters out values higher than the Nyquist Frequency, then segments the signal 
 into frames containing at least 3 periods of the minimum pitch. For each frame it then 
@@ -125,7 +118,7 @@ the frame, and the ending time of the frame. The indicies in each list correspon
 
 <dl class="function">
 <dt id="Signal_Analysis.get_HNR">
-<code class="descclassname">Signal_Analysis.</code><code class="descname">get_HNR</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>time_step=0.01</em>, <em>min_pitch=75</em>, <em>silence_threshold=0.1</em>, <em>periods_per_window=4.5</em><span class="sig-paren">)</span><a class="headerlink" href="#Signal_Analysis.get_HNR" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Signal_Analysis.</code><code class="descname">get_HNR</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>time_step=0.01</em>, <em>min_pitch=75</em>, <em>silence_threshold=0.1</em>, <em>periods_per_window=4.5</em><span class="sig-paren">)</span></a></dt>
 <dd><p>Compute Fundamental Frequency (F_0).
 Algorithm filters out values higher than the Nyquist Frequency, then segments the signal 
 into frames containing at least 3 periods of the minimum pitch. For each frame it then 
@@ -165,7 +158,7 @@ signal.</p>
 
 <dl class="function">
 <dt id="Signal_Analysis.get_Jitter">
-<code class="descclassname">Signal_Analysis.</code><code class="descname">get_Jitter</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>period_floor=0.0001</em>, <em>period_ceiling=0.02</em>, <em>max_period_factor=1.3</em><span class="sig-paren">)</span><a class="headerlink" href="#Signal_Analysis.get_Jitter" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Signal_Analysis.</code><code class="descname">get_Jitter</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>period_floor=0.0001</em>, <em>period_ceiling=0.02</em>, <em>max_period_factor=1.3</em><span class="sig-paren">)</span></a></dt>
 <dd><p>Compute Jitter, random pertubations in period length.
 Algorithm filters out values higher than the Nyquist Frequency, then segments the signal
 into frames containing at least 3 periods of period ceiling. For each frame it 
@@ -210,7 +203,7 @@ values corresponding to each type of jitter.</dd>
 
 <dl class="function">
 <dt id="Signal_Analysis.get_Pulses">
-<code class="descclassname">Signal_Analysis.</code><code class="descname">get_Pulses</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>min_pitch=75</em>, <em>max_pitch=600</em>, <em>include_maxima=False</em>, <em>include_minima=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Signal_Analysis.get_Pulses" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Signal_Analysis.</code><code class="descname">get_Pulses</code><span class="sig-paren">(</span><em>signal</em>, <em>rate</em>, <em>min_pitch=75</em>, <em>max_pitch=600</em>, <em>include_maxima=False</em>, <em>include_minima=True</em><span class="sig-paren">)</span></a></dt>
 <dd><p>This algorithm examines voiced intervals of a signal, and creates a list of points that correspond
 to the sequence of glottal closures in vocal-fold vibration.
 adapted from: <a class="reference external" href="https://pdfs.semanticscholar.org/16d5/980ba1cf168d5782379692517250e80f0082.pdf">https://pdfs.semanticscholar.org/16d5/980ba1cf168d5782379692517250e80f0082.pdf</a></p>
@@ -249,9 +242,6 @@ be greater than Nyquist Frequency</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Signal_Analysis package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#signal-analysis-signal-analysis-module">Signal_Analysis.Signal_Analysis module</a></li>
-<li><a class="reference internal" href="#module-Signal_Analysis">Module contents</a></li>
 </ul>
 </li>
 </ul>
