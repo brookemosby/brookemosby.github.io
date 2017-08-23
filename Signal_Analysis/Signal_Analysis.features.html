@@ -320,16 +320,18 @@ symptoms.</p>
 <p class="rubric">Example</p>
 <p>The example below adjusts parameters of the function, using the same
 synthesized signal with added noise, to demonstrate the stability of
-the function.
-&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; from matplotlib import pyplot as plt
-&gt;&gt;&gt; domain = np.linspace( 0, 6, 300000 )
-&gt;&gt;&gt; rate = 50000
-&gt;&gt;&gt; y = lambda x:( 1 + .3 * np.sin( 2 * np.pi * 140 * x ) ) * np.sin(
-2 * np.pi * 140 * x )
-&gt;&gt;&gt; signal = y( domain ) + .2 * np.random.random( 300000 )
-&gt;&gt;&gt; get_HNR( signal, rate )
-21.885338007330802</p>
+the function.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">300000</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rate</span> <span class="o">=</span> <span class="mi">50000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:(</span> <span class="mi">1</span> <span class="o">+</span> <span class="o">.</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">140</span> <span class="o">*</span> <span class="n">x</span> <span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span>
+<span class="go">2 * np.pi * 140 * x )</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">signal</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span> <span class="n">domain</span> <span class="p">)</span> <span class="o">+</span> <span class="o">.</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span> <span class="mi">300000</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_HNR</span><span class="p">(</span> <span class="n">signal</span><span class="p">,</span> <span class="n">rate</span> <span class="p">)</span>
+<span class="go">21.885338007330802</span>
+</pre></div>
+</div>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_HNR</span><span class="p">(</span> <span class="n">signal</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">periods_per_window</span> <span class="o">=</span> <span class="mi">6</span> <span class="p">)</span>
 <span class="go">21.866307805597849</span>
 </pre></div>
@@ -444,19 +446,21 @@ difference to the mean period.</p>
 </table>
 <p class="rubric">Example</p>
 <p>In the example below a synthesized signal is used to demonstrate random
-perturbations in periods, and how get_Jitter responds.
-&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; domain = np.linspace( 0, 6, 300000 )
-&gt;&gt;&gt; y = lambda x:( 1 - .3 * np.sin( 2 * np.pi * 140 * x ) ) * np.sin(
-2 * np.pi * 140 * x )
-&gt;&gt;&gt; signal = y( domain ) + .2 * np.random.random( 300000 )
-&gt;&gt;&gt; rate = 50000
-&gt;&gt;&gt; get_Jitter( signal, rate )
-{ ‘ddp’: 0.047411037373434134,
-‘local’: 0.02581897560637415,
-‘local, absolute’: 0.00018442618908563846,
-‘ppq5’: 0.014805010237029443,
-‘rap’: 0.015803679124478043 }</p>
+perturbations in periods, and how get_Jitter responds.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">300000</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:(</span> <span class="mi">1</span> <span class="o">-</span> <span class="o">.</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">140</span> <span class="o">*</span> <span class="n">x</span> <span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span>
+<span class="go">2 * np.pi * 140 * x )</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">signal</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span> <span class="n">domain</span> <span class="p">)</span> <span class="o">+</span> <span class="o">.</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span> <span class="mi">300000</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rate</span> <span class="o">=</span> <span class="mi">50000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_Jitter</span><span class="p">(</span> <span class="n">signal</span><span class="p">,</span> <span class="n">rate</span> <span class="p">)</span>
+<span class="go">{ &#39;ddp&#39;: 0.047411037373434134,</span>
+<span class="go">&#39;local&#39;: 0.02581897560637415,</span>
+<span class="go">&#39;local, absolute&#39;: 0.00018442618908563846,</span>
+<span class="go">&#39;ppq5&#39;: 0.014805010237029443,</span>
+<span class="go">&#39;rap&#39;: 0.015803679124478043 }</span>
+</pre></div>
+</div>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_Jitter</span><span class="p">(</span> <span class="n">signal</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">period_floor</span> <span class="o">=</span> <span class="o">.</span><span class="mi">001</span><span class="p">,</span>
 <span class="go">period_ceiling = .01, max_period_factor = 1.05 )</span>
 <span class="go">{ &#39;ddp&#39;: 0.03264516540374475,</span>
@@ -540,17 +544,19 @@ correspond to the signal’s periodicity.</p>
 </table>
 <p class="rubric">Example</p>
 <p>Pulses are calculated for a synthesized signal, and the variation in
-time between each pulse is shown.
-&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; from matplotlib import pyplot as plt
-&gt;&gt;&gt; domain = np.linspace( 0, 6, 300000 )
-&gt;&gt;&gt; y = lambda x:( 1 + .3 * np.sin( 2 * np.pi * 140 * x ) ) * np.sin(
-2 * np.pi * 140 * x )
-&gt;&gt;&gt; signal = y( domain ) + .2 * np.random.random( 300000 )
-&gt;&gt;&gt; rate = 50000
-&gt;&gt;&gt; p = get_Pulses( signal, rate )
-&gt;&gt;&gt; print( p[ :5 ] )
-[ 0.00542001  0.01236002  0.01946004  0.02702005  0.03402006 ]</p>
+time between each pulse is shown.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">domain</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">300000</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:(</span> <span class="mi">1</span> <span class="o">+</span> <span class="o">.</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">140</span> <span class="o">*</span> <span class="n">x</span> <span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span>
+<span class="go">2 * np.pi * 140 * x )</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">signal</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span> <span class="n">domain</span> <span class="p">)</span> <span class="o">+</span> <span class="o">.</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span> <span class="mi">300000</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rate</span> <span class="o">=</span> <span class="mi">50000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">get_Pulses</span><span class="p">(</span> <span class="n">signal</span><span class="p">,</span> <span class="n">rate</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span> <span class="n">p</span><span class="p">[</span> <span class="p">:</span><span class="mi">5</span> <span class="p">]</span> <span class="p">)</span>
+<span class="go">[ 0.00542001  0.01236002  0.01946004  0.02702005  0.03402006 ]</span>
+</pre></div>
+</div>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span> <span class="n">p</span><span class="p">[</span> <span class="p">:</span><span class="mi">6</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
 <span class="go">[ 0.00694001  0.00710001  0.00756001  0.00700001  0.00712001 ]</span>
 </pre></div>
